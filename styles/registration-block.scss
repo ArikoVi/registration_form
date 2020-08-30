@@ -1,0 +1,79 @@
+* { margin: 0; padding: 0; }
+
+body{
+  background-image: url("images/fon.jpg");
+  background-size: 100%;//размер катринки под экран?
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.registration-block::before{
+  content: "";
+  max-width: 672px;
+  background-color: #8fa63c;
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.registration-block{
+  max-width: 672px;
+  margin: 0 auto;
+  margin-top: 152px;
+}
+
+.registration-block__content{
+  background: #fff;
+  padding: 32px 40px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 40px 0 rgba(0,0,0,.5);
+}
+
+/*Заголовок*/
+.title{
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 42px;
+  font-size: 21px;
+  display: inline-block;
+}
+.active{
+  color: #63732C;
+  /*margin-right: 256px;*/
+  border:none;
+  border-bottom: 2px solid #8fa63c;
+}
+.default{
+  color: #8fa63c;
+  border:none;
+}
+h1:active,h1:focus,h1:hover{
+  color: #63732C;
+  /*margin-right: 256px;*/
+  border:none;
+  border-bottom: 2px solid #8fa63c;
+}
+
+h1{
+  text-transform:uppercase;
+  color: #8fa63c;
+  display: inline-block;
+  width: 336px;
+}
+.h1__small{
+  margin-left: 124px;
+  width: 128px;
+}
+/*
+.title h1:after  {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 272px;
+  background: #8fa63c;
+  top: 28%;
+  margin: 0 auto;
+  left: 453px;
+}*/

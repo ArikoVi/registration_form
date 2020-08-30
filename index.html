@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Регистрация</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.js" type="text/javascript"></script>
+    <script src="skripts/jquery.js"></script>
+    <script src="skripts/jquery.maskedinput.min.js"></script>
+    <script src="skripts/script.js"></script>
+    <script src="skripts/form.js"></script>
+</head>
+<body>
+    <div class="registration-block">
+        <div class="registration-block__content">
+            <div class="title source source-1" id="source-1"><h1 id="h1" class="active">Регистрация</h1></div>
+            <div class="title source source-2" id="source-2"><h1 id="h1__small" class="h1__small">Вход</h1></div>
+            <form class="form-field target target-1">
+                <input class="form-field__field in-row in-row_first" type="text" placeholder="Имя">
+                <input class="form-field__field in-row" type="text" placeholder="Фамилия">
+                <input class="form-field__field" type="date" value="ДД.ММ.ГГГГ">
+                <select class="form-field__field" name="city">
+                    <option>Город</option>
+                    <option>Москва</option>
+                    <option>Екатеринбург</option>
+                    <option>Магнитогорск</option>
+                </select>
+                <input class="form-field__field" type="email" placeholder="E-mail">
+                <input class="form-field__field phone_mask" type="tel" placeholder="Телефон" id="phone">
+                <!--parol-->
+                <div class="password">
+                    <input class="form-field__field" type="password" id="password-input" name="password" placeholder="Пароль">
+                    <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+                </div>
+                <div class="consent">
+                    <label>
+                        <input type="checkbox">
+                        <span class="consent-check"><div class="consent-text">Я соглашаюсь с
+                            <a class="link" href="#">условиями обработки и использования</a> моих<br> персональных данных</div></span>
+                    </label>
+                </div>
+                <div class="button">
+                    <div id="button">
+                        <button class="button-further">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Регистрация</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <form class="form-field target target-2">
+                <input class="form-field__field phone_mask" type="tel" placeholder="Телефон" id="phone2">
+                <!--parol-->
+                <div class="password">
+                    <input class="form-field__field" type="password" id="password-input2" name="password" placeholder="Пароль">
+                    <a href="#" class="password-control password-control2" onclick="return show_hide_password2(this);"></a>
+                </div>
+                <a class="consent-text link" href="#">Забыли пароль?</a>
+                <div class="button button2">
+                    <div id="button2">
+                        <button class="button-further">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                            <span class="button-text">Регистрация</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        $(".phone_mask").mask("+7(999)999-99-99");
+    </script>
+    <script>
+        main()
+    </script>
+    <script>
+        $('#source-1').click(function() {
+            $('#h1').addClass('active');
+            $('#h1__small').removeClass('active');
+        });
+        $('#source-2').click(function() {
+            $('#h1__small').addClass('active');
+            $('#h1').removeClass('active');
+        });
+    </script>
+</body>
+</html>

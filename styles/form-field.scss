@@ -1,0 +1,111 @@
+form {
+  display: block;
+  position: relative;
+}
+
+.form-field__field{
+  height: 60px;
+  background-color:#fff;
+  border:none;
+  border-bottom: 1px solid #a6a6a6;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  display: block;
+  width: 100%;
+  color: rgba(42, 42, 42, 0.72);
+  padding-top: 20px;//?
+  margin-bottom: 40px;//?
+}
+.in-row{
+  display: inline-block;
+  width: 45%;
+}
+.in-row_first{
+  margin-right: 9%;
+}
+/*city*/
+option{
+  /*border: none;
+  box-shadow: 0 0 40px 0 rgba(0,0,0,.5);*/
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+  appearance: none;
+  user-select: none;
+  font-size: 12px;
+  flex-basis: 100%;
+}
+
+select{
+  border: none;
+}
+/*password*/
+.password{
+  margin-bottom: 8px;
+}
+.password-control {
+  position: absolute;
+  bottom: 213px;
+  right: 6px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(https://snipp.ru/demo/495/view.svg) 0 0 no-repeat;
+}
+.password-control.view {
+  background: url(https://snipp.ru/demo/495/no-view.svg) 0 0 no-repeat;
+}
+
+/*consent*/
+.consent{
+  margin-top: 40px;
+  display: inline-block;
+}
+input[type=checkbox] { display: none; }
+
+.consent-check{
+  display: inline-block;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid #B0B0B0;
+  border-radius: 2px;
+  margin-right: 6px;
+  vertical-align: top;
+}
+.consent-check::before {
+  content: "\00A0";
+  position: absolute;
+  bottom: 103px;
+  /*display: inline-block;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid #B0B0B0;
+  border-radius: 2px;
+  margin-right: 6px;
+  vertical-align: top;*/
+
+}
+
+input[type=checkbox]:checked + .consent-check::before {
+  content: "\2713";
+  font-size: 21px;
+}
+
+.consent-text{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin-left: 32px;
+  width: 528px;
+}
+
+.link{
+  text-decoration: none;
+  color: #bf793b;
+  margin-left: 0;
+}
+
+.hidden {
+  display: none
+}
